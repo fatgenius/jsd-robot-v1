@@ -1,16 +1,31 @@
+/* This is the servo part 
+--- Author: Butian Du
+--- Time: 10/26/2018
+--- project: robot for cutting grass 
+--- Arduino part for the robort
+--- this part is combined of the moduel sc-90 and sg90 part  
+--- using the servo.h library 
+*/
 #include <Servo.h>
 
-const int trigPin = 10;
-const int echoPin = 11;
+int trigPin = 10;
+int echoPin = 11;
 
-long duration;
-int distinCM;
+long duration; // this is the duration time 
+int distinCM;  // this is the ressult of the distance 
 
-Servo radarServo;
+Servo radarServo; // invoke the Servo library 
 
+/*
+ *  The serial port we use the serial port 9600
+ *  The sc90 mouduel are including the triger pin  and the echo pin  
+ *  The  
+ * 
+ * 
+ */
 void setup() 
 {
-  pinMode(trigPin, OUTPUT);
+  pinMode(trigPin, OUTPUT); //
   pinMode(echoPin, INPUT);
   Serial.begin(9600);
   radarServo.attach(9);
